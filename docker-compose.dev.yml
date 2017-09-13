@@ -9,6 +9,14 @@ services:
       # prevent mounting node_modules to avoid cross-platform incompatibilities
       - /var/lib/app/node_modules
     entrypoint: /home/docker/startup.integration.sh
+  graphql:
+    volumes:
+      - ./services/graphql/src:/var/lib/app
+      - ./services/graphql/scripts:/home/docker
+      - ./services/core:/var/lib/core
+      # prevent mounting node_modules to avoid cross-platform incompatibilities
+      - /var/lib/app/node_modules
+    entrypoint: /home/docker/startup.integration.sh
   user:
     volumes:
       - ./services/user/src:/var/lib/app

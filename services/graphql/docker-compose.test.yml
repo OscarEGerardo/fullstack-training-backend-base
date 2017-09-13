@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  graphql:
+    environment:
+      NODE_ENV: test
+    entrypoint: /home/docker/startup.test.sh
+    volumes:
+      - ./services/graphql/src/unit_coverage:/var/lib/app/unit_coverage
+      - ./services/graphql/src/functional_coverage:/var/lib/app/functional_coverage

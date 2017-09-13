@@ -3,6 +3,8 @@ version: '2'
 services:
   api:
     entrypoint: /home/docker/startup.integration.sh
+  graphql:
+    entrypoint: /home/docker/startup.integration.sh
   user:
     entrypoint: /home/docker/startup.integration.sh
   notification:

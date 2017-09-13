@@ -35,6 +35,20 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
       container_group: service
+  graphql:
+    build:
+      context: ./services
+      dockerfile: ./graphql/Dockerfile
+    image: backend/graphql
+    links:
+      - user
+    environment:
+      TORUS_ENV: "${TORUS_ENV}"
+      TORUS_SERVICE: "${TORUS_SERVICE}"
+    ports:
+      - "3000:3000"
+    labels:
+      container_group: service
   api:
     build:
       context: ./services

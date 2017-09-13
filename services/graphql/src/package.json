@@ -1,0 +1,28 @@
+{
+  "name": "graphql",
+  "version": "0.0.1",
+  "private": true,
+  "description": "GraphQL",
+  "author": "",
+  "license": "",
+  "main": "app.js",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "is-my-json-valid": "^2.15.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "node-rdkafka": "^1.0.6",
+    "sinon": "^1.17.7"
+  },
+  "dependencies": {
+    "apollo-server-express": "^1.1.2",
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "graphql": "^0.11.3",
+    "graphql-server-express": "^1.1.2",
+    "graphql-tools": "^1.2.2",
+    "grpc": "^1.6.0",
+    "lodash": "^4.17.4"
+  }
+}
