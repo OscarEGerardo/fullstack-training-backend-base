@@ -10,6 +10,9 @@ const server = express();
 
 function loggingMiddleware(req, res, next) {
   console.log('ip:', req.ip);
+  req.user = {
+    name: 'Oscar'
+  }
   next();
 }
 
@@ -17,7 +20,7 @@ server.use(loggingMiddleware);
 
 server.use('/graphql', bodyParser.json(), graphqlExpress( req => ({
   schema,
-  context: req
+  context: req.user
 })));
 
 server.use('/graphiql', graphiqlExpress({

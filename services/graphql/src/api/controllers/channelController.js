@@ -16,8 +16,6 @@ module.exports = {
     const channel = _.find(channels, { id });
 
     console.log('//////////');
-    console.log(root);
-    console.log('//////////');
     console.log(context);
     console.log('//////////');
 
